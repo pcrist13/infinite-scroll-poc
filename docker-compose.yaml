@@ -1,0 +1,13 @@
+version: '3.5'
+
+services:
+  infinite-loop-poc:
+    container_name: infinite-loop-poc
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - '.:/usr/src/app'
+      - '/usr/src/app/node_modules'
+    ports:
+      - '4200:4200'
